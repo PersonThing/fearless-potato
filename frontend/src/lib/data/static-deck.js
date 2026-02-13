@@ -456,10 +456,77 @@ export function getStaticDeck() {
       ],
     },
 
-    // Slide 11: The Ask
+    // Slide 11: Security
     {
       id: "static-11",
       order: 10,
+      layout: "two-column",
+      background: "dark",
+      blocks: [
+        {
+          type: "heading",
+          level: 2,
+          text: "But Wait — Security",
+          color: "accent",
+          column: 1,
+        },
+        {
+          type: "text",
+          content:
+            "This is all super fun — but we've entered a {{accent:new realm}} of potential security issues. Both sides of the coin have real risks.",
+          column: 1,
+        },
+        { type: "spacer", size: "sm", column: 1 },
+        {
+          type: "text",
+          content: "**Building with LLMs**",
+          color: "electric",
+          column: 1,
+        },
+        {
+          type: "list",
+          style: "icon",
+          column: 1,
+          items: [
+            { icon: "💉", text: "**Prompt injection** from users" },
+            { icon: "💬", text: "**Insecure output handling** — trusting LLM output blindly" },
+            { icon: "🤖", text: "**Excessive agency** — too many tools, too much autonomy" },
+            { icon: "🔓", text: "**Disclosing sensitive info** in prompts or responses" },
+            { icon: "☠️", text: "**RAG poisoning** — tainted data in your knowledge base" },
+            { icon: "💸", text: "**Model DDoS** — runaway token usage and cost" },
+          ],
+        },
+        {
+          type: "text",
+          content: "**Agentic Coding**",
+          color: "electric",
+          column: 2,
+        },
+        {
+          type: "list",
+          style: "icon",
+          column: 2,
+          items: [
+            { icon: "🪤", text: "**Honeypot skills / MCPs** — malicious extensions disguised as helpful tools" },
+            { icon: "🫠", text: "**Hallucination / slopsquatting** — fake packages, fake APIs" },
+            { icon: "📦", text: "**Unvetted dependencies** — blindly installing what the agent suggests" },
+            { icon: "⚠️", text: "**Tool misuse** — the agent doing things you didn't intend" },
+          ],
+        },
+        { type: "spacer", size: "sm", column: 2 },
+        {
+          type: "quote",
+          text: "Be very careful what you approve. Vet skills, MCPs, and dependencies thoroughly. It's easy to get impatient once you start trusting it — but stay vigilant, especially in code-bases with production users.",
+          color: "potato",
+          column: 2,
+        },
+      ],
+    },
+
+    // Slide 12: The Ask
+    {
+      id: "static-12",
+      order: 11,
       layout: "section",
       background: "accent",
       blocks: [
@@ -488,10 +555,10 @@ export function getStaticDeck() {
       ],
     },
 
-    // Slide 12: Closing
+    // Slide 13: Closing
     {
-      id: "static-12",
-      order: 11,
+      id: "static-13",
+      order: 12,
       layout: "center",
       background: "dark",
       blocks: [
@@ -508,7 +575,7 @@ export function getStaticDeck() {
         {
           type: "text",
           content:
-            "Clone it, tinker with it, break it, make it yours.",
+            "Feel free to clone it, tinker with it, break it, make it yours.",
           size: "md",
         },
         { type: "spacer", size: "sm" },
