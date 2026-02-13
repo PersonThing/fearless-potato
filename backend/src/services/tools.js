@@ -1,23 +1,7 @@
-import { readReadme, readPresentationNotes } from '../rag/readme-reader.js';
+import { readReadme } from '../rag/readme-reader.js';
 import { searchCode, readSourceFile } from '../rag/code-searcher.js';
 
 export const TOOLS = [
-  {
-    name: 'read_presentation_notes',
-    description:
-      "Read the presenter's detailed notes about the talk. This is the PRIMARY source of content for slides. Contains: the presenter's AI journey (skeptic to writing 100% of code with agents), scaffolding techniques (AGENTS.md, CLAUDE.md, skills, self-correction mechanisms), philosophy on presenting AI with the problem not the plan, side projects with kids (cs-crawler 3D multiplayer RPG, 11yo's time-manipulation puzzle game, 13yo's TRS80 BASIC programming and Minecraft-in-C rebuild), audience info (20 devs/engineers/product/UX), goals (get everyone to improve their agentic processes), and details about this app itself. USE THIS TOOL for any slide about the presenter's story, experiences, or talk content.",
-    input_schema: {
-      type: 'object',
-      properties: {
-        section: {
-          type: 'string',
-          description:
-            'Optional: a keyword to find a relevant section (e.g., "kids", "scaffolding", "journey", "goal", "skeptic", "TRS80", "minecraft", "audience"). If omitted, returns the full document.',
-        },
-      },
-      required: [],
-    },
-  },
   {
     name: 'read_readme',
     description:
@@ -74,8 +58,6 @@ export const TOOLS = [
 
 export async function executeTool(name, input) {
   switch (name) {
-    case 'read_presentation_notes':
-      return readPresentationNotes(input.section);
     case 'read_readme':
       return readReadme(input.section);
     case 'search_code':

@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..', '..', '..');
 const README_PATH = resolve(ROOT, 'README.md');
-const NOTES_PATH = resolve(ROOT, 'docs', 'presentation-notes.md');
 
 function readAndFilter(filePath, section) {
   const content = readFileSync(filePath, 'utf-8');
@@ -31,8 +30,4 @@ function readAndFilter(filePath, section) {
 
 export function readReadme(section) {
   return readAndFilter(README_PATH, section);
-}
-
-export function readPresentationNotes(section) {
-  return readAndFilter(NOTES_PATH, section);
 }

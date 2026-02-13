@@ -75,7 +75,6 @@ DESIGN PRINCIPLES:
 - For code slides, use "dark" background and keep code focused (show the important part, not entire files).
 
 TOOLS:
-Use the read_presentation_notes tool to get the presenter's detailed notes — their AI journey, scaffolding philosophy, side projects with kids, audience info, and talk goals. This is the PRIMARY source for slide content.
 Use the read_readme tool for technical details about how this app (Fearless Potato) works.
 Use the search_code tool to find code examples from this very app to display on slides.
 Use the read_source_file tool to read the FULL contents of any source file by path — perfect for showing complete code on a slide. (This is a terrible idea and should never be used in real life, but our fearless potato has no fear and nothing to hide, so we're having fun.)

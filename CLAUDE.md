@@ -49,7 +49,7 @@ Block components live in `frontend/src/components/blocks/`.
 - Multi-provider LLM support: set ONE key in `backend/.env` (ANTHROPIC_API_KEY, OPENAI_API_KEY, or GEMINI_API_KEY). Auto-detected at startup.
 - Provider implementations in `src/services/providers/` — each exports `runToolLoop()` with a unified interface.
 - `src/services/llm.js` is the main entry point.
-- 4 RAG tools defined in `src/services/tools.js`: read_presentation_notes, read_readme, search_code, read_source_file
+- 3 RAG tools defined in `src/services/tools.js`: read_readme, search_code, read_source_file
 - RAG implementations in `src/rag/`: `readme-reader.js` and `code-searcher.js`
 - API returns JSON: `{ blocks, layout, background, toolCalls }`
 
