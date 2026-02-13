@@ -1,0 +1,31 @@
+/* Base slide container — layout is now handled by SlideRenderer.svelte */
+/* These styles remain for legacy HTML slides and as a baseline reset */
+
+.slide-content strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.slide-content em {
+  font-style: italic;
+}
+
+/* Theme color utility classes (used by inline markup parser) */
+.slide-content .theme-accent { color: var(--color-accent); }
+.slide-content .theme-electric { color: var(--color-electric); }
+.slide-content .theme-potato { color: var(--color-potato); }
+.slide-content .theme-success { color: var(--color-success); }
+.slide-content .theme-primary { color: var(--color-text-primary); }
+.slide-content .theme-secondary { color: var(--color-text-secondary); }
+.slide-content .theme-muted { color: var(--color-text-muted); }
+
+/* Legacy utility classes (for old HTML slides) */
+.slide-content .accent { color: var(--color-accent); }
+.slide-content .electric { color: var(--color-electric); }
+.slide-content .potato { color: var(--color-potato); }
+.slide-content .gradient-text {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-potato));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

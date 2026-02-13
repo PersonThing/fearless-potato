@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:svelte.dev)",
+      "WebFetch(domain:svelte-llm.stanislav.garden)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:api.fontshare.com)",
+      "Bash(npx vite build)",
+      "Bash(timeout 5 node:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)"
+    ]
+  }
+}
